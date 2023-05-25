@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { ExamCalendar } from '../components/exams/exam-calendar'
 
 export default function Home() {
   return (
@@ -11,12 +12,16 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-3xl text-teal-800">
-          Welcome to <a href="https://nextjs.org">Schkoula</a>
-        </h1>
+        <div className='min-w-screen min-h-screen mx-auto text-3xl text-slate-800 bg-slate-50 font-poppins'>
+          <Head>
+            <title>Schkoula</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-        <div className='text-center flex gap-4'>
-          <Link href={'app/assignments'} >Assignments</Link>
+          <div className="flex w-5/6 mx-auto gap-3">
+            <ExamCalendar />
+          </div>
+          
         </div>
       </main>
     </div>
